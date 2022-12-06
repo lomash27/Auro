@@ -1,7 +1,5 @@
 import xml.etree.ElementTree as ET
 import time
-import sys
-import os
 import argparse
 from collections import OrderedDict
 
