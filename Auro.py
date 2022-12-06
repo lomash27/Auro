@@ -107,17 +107,11 @@ def parse_xml(xml_file):
 
 
 def parse_order(order):
-    operation = order.get("operation")
-    book = order.get("books")
-    if order.get("price") is None:
-        price = 0
-    else:
-        price = float(order.get("price"))
-    if order.get("volume") is None:
-        volume = 0
-    else:
-        volume = order.get("volume")
-    orderId = order.get("orderId")
+    operation = order.attrib["operation"]
+    book = order.attrib["book"]
+    volume = order.attrib['volume"]
+    price= order.attrib["price"]
+    orderId = order.attrib["orderId"]
     return Order(operation, book, price, volume, orderId)
 
 
